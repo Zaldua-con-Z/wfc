@@ -4,7 +4,6 @@ let ancho; //anchura de la celda
 let alto; // altura de la celda
 
 const azulejos = [];
-const NA = 11; //numero de los azulejos
 
 let opcionesI = [];
 
@@ -89,6 +88,8 @@ const reglas = [
   },
   ];
 
+  const NA = reglas.length; //numero de los azulejos
+
 function preload (){
   for(let i = 0; i < NA; i ++){
     azulejos[i]= loadImage(`azulejos/tile${i}.png`);
@@ -112,14 +113,6 @@ function setup (){
         opciones: opcionesI,
       };
     }
-    //celdas[8].colapsada = true;
-    //celdas[3].colapsada = true;
-
-    //celdas[12].opciones = [ 5,6,8];
-    //celdas[4].opciones = [4,7,12];
-    //celdas [6].opciones [9,7,12]
-    //celdas[1].opciones = [6,4,8,10];
-    //celdas[5].opciones = [11,6,4,8,10];
   }
 
 function draw (){
